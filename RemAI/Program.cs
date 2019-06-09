@@ -73,7 +73,7 @@ retry:
                     while (isHaveMoney == true) // if all conditions are true
                     {
 
- // #TODO Bug with limit and tries
+ // #TODO Bug with limit and triess
 
                         if (bux >= 10)
                         {
