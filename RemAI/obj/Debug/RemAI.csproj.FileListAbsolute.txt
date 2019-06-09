@@ -1,0 +1,7 @@
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.csprojAssemblyReference.cache
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.csproj.CoreCompileInputs.cache
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.exe.config
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.exe
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.pdb
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.exe
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.pdb
