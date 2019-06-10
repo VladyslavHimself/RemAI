@@ -19,7 +19,7 @@ namespace RemAI
         static void Main(string[] args)
         {
 start:
-              bool isHaveMoney, isLimitReached = false;   string temp, answr;  int bux, bet, probes = 0, lim; // Initialize all variables
+              bool isHaveMoney, isLimitReached = false;   string temp, answr;  int bux, bet, probes = 0, lim = 50000; // Initialize all variables
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
             Console.WriteLine("Enter your amount of bux: ");
@@ -73,47 +73,52 @@ retry:
                     while (isHaveMoney == true) // if all conditions are true
                     {
 
- // #TODO Bug with limit and triess
-
-                        if (bux >= 10)
+                        if (bux >= 10) // if buxes less than minimum value -> break the cycle and shown information by your request
                         {
-                            if (bet > 500000)
+                            if (bet > lim) // if your bet break the limit, show information about this. Set high-limit values to red
                             {
 
-                                Console.ForegroundColor = ConsoleColor.Red;
-                                if (isLimitReached == false)
+                                Console.ForegroundColor = ConsoleColor.Red; // Change text color to red ( for nubmers )
+                                if (isLimitReached == false) // realized for one time operation to detect 
                                 {
-                                    Console.ForegroundColor = ConsoleColor.Green;
+                                    Console.ForegroundColor = ConsoleColor.Green; // Change color to green  ( for "Limit" information )
                                     isLimitReached = true;
 
-                                    probes -= 1;
+                                    probes -= 1; // Safe-zone for the user
 
-                                    
+                                    // information about limit
 
                                     Console.WriteLine(Environment.NewLine + "Limit reached!");
                                     Console.WriteLine("You can bet " + probes + " on line with the limit!" + Environment.NewLine);
 
-                                    probes += 1;
+                                    // END information
 
-                                Console.ForegroundColor = ConsoleColor.Red;
+                                    probes += 1; // back to the real values
+
+                                Console.ForegroundColor = ConsoleColor.Red; // back to the red color for numbers
                                 }
                             }
 
                             bux = bux - (bet * 2); // Calculating formula for CSGO500
-                            bet *= 2;
-                            probes += 1;
+                            bet *= 2; // bet multiplies by 2
+                            probes += 1; // add this try to 
 
                      
-                            Console.WriteLine( probes + " try = " + bet);
+                            Console.WriteLine( probes + " try = " + bet); // information about tries and bet that they need
 
 
                         }
                         
                         else { // after calculating turn off bool and show message with info
-                            Console.ResetColor();
+                            Console.ResetColor(); // reset color to default 
                         isHaveMoney = false; // set bool to false, end cycle
+
+                                    // information about bets without limits
+
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine("You can bet " + probes + " times on line without limit ;)");
+
+                                    // END information
                         }
                     }
                 }
