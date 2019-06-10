@@ -19,7 +19,7 @@ namespace RemAI
         static void Main(string[] args)
         {
 start:
-              bool isHaveMoney;   string temp, answr;  int bux, bet, probes = 0; // Initialize all variables
+              bool isHaveMoney, isLimitReached = false;   string temp, answr;  int bux, bet, probes = 0, lim; // Initialize all variables
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
             Console.WriteLine("Enter your amount of bux: ");
@@ -64,9 +64,9 @@ retry:
                     goto retry; // back 
                 } else {
 
-                    // "Genius" algorithm by me. While we have money, they calculating streak of all possible loss. If they done -> show how many attempts you have
+ // "Genius" algorithm by me. While we have money, they calculating streak of all possible loss. If they done -> show how many attempts you have
 
-                    Console.WriteLine("============ LOG ============");
+                    Console.WriteLine("============ LOG ============" + Environment.NewLine);
 
                     
 
@@ -77,22 +77,43 @@ retry:
 
                         if (bux >= 10)
                         {
+                            if (bet > 500000)
+                            {
+
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                if (isLimitReached == false)
+                                {
+                                    Console.ForegroundColor = ConsoleColor.Green;
+                                    isLimitReached = true;
+
+                                    probes -= 1;
+
+                                    
+
+                                    Console.WriteLine(Environment.NewLine + "Limit reached!");
+                                    Console.WriteLine("You can bet " + probes + " on line with the limit!" + Environment.NewLine);
+
+                                    probes += 1;
+
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                }
+                            }
+
                             bux = bux - (bet * 2); // Calculating formula for CSGO500
                             bet *= 2;
                             probes += 1;
+
+                     
                             Console.WriteLine( probes + " try = " + bet);
-                        } else if (bet >= 500000) {
 
-                            isHaveMoney = false; // set bool to false, end cycle
-                            Console.WriteLine("=============================");
-                            Console.WriteLine("You beat CSGO500 limit for 500.000 bux");
-                                Console.WriteLine("You can bet " + probes + "times on line ;)");
 
-                        } else { // after calculating turn off bool and show message with info
-
+                        }
+                        
+                        else { // after calculating turn off bool and show message with info
+                            Console.ResetColor();
                         isHaveMoney = false; // set bool to false, end cycle
-                            Console.WriteLine("=============================");
-                            Console.WriteLine("You can bet " + probes + "times on line ;)");
+                            Console.WriteLine(Environment.NewLine + "=============================");
+                            Console.WriteLine("You can bet " + probes + " times on line without limit ;)");
                         }
                     }
                 }
