@@ -89,7 +89,7 @@ retry:
                                     // information about limit
 
                                     Console.WriteLine(Environment.NewLine + "Limit reached!");
-                                    Console.WriteLine("You can bet " + probes + " on line with the limit!" + Environment.NewLine);
+                                    Console.WriteLine($"You can bet {probes} on line with the limit!" + Environment.NewLine);
 
                                     // END information
 
@@ -116,7 +116,7 @@ retry:
                                     // information about bets without limits
 
                             Console.WriteLine(Environment.NewLine + "=============================");
-                            Console.WriteLine("You can bet " + probes + " times on line without limit ;)");
+                            Console.WriteLine($"You can bet {probes} times on line without limit ;)");
 
                                     // END information
                         }
