@@ -103,7 +103,9 @@ retry:
                             bet *= 2; // bet multiplies by 2
                             probes += 1; // add this try to 
 
-                     
+                            
+                           
+
                             Console.WriteLine( probes + " try = " + bet); // information about tries and bet that they need
 
 

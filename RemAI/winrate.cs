@@ -9,7 +9,13 @@ namespace RemAI
 
     class Winrate
     {
-        readonly int x;
+       
+        public static void toCalculateWinrate()
+        {
+
+            Console.WriteLine("Your winrate = test %");
+
+        }
 
     }
 }
