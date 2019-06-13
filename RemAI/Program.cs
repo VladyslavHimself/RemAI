@@ -119,7 +119,7 @@ retry:
 
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
-
+                            Winrate.toCalculateWinrate();
                                     // END information
                         }
                     }

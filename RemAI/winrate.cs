@@ -12,8 +12,9 @@ namespace RemAI
        
         public static void toCalculateWinrate()
         {
+            int absoluteWinrate = 100;
 
-            Console.WriteLine("Your winrate = test %");
+            Console.WriteLine($"Your winrate = {absoluteWinrate}");
 
         }
 
