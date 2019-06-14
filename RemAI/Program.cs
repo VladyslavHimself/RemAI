@@ -5,17 +5,29 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-               /*
-                * 
-                * Programm oriented only for CSGO500
-                * If you have some questions, please leave it here: vladyslavhimself@gmail.com
-                * 
-                */
+
+/*
+ * 
+ * Programm oriented only for CSGO500
+ * If you have some questions, please leave it here: vladyslavhimself@gmail.com
+ * 
+ */
+
+
 
 namespace RemAI
 {
     class Program
     {
+
+        public static void toCalculateMartengeil(int bux, int bet, int probes)
+        {
+
+
+            
+        }
+
+
         static void Main(string[] args)
         {
 start:
@@ -99,12 +111,12 @@ retry:
                                 }
                             }
 
+                           
+
                             bux = bux - (bet * 2); // Calculating formula for CSGO500
                             bet *= 2; // bet multiplies by 2
                             probes += 1; // add this try to 
 
-                            
-                           
 
                             Console.WriteLine( probes + " try = " + bet); // information about tries and bet that they need
 
@@ -120,6 +132,7 @@ retry:
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
                             Winrate.toCalculateWinrate();
+                            Console.WriteLine($"Your winrate was percentage!");
                                     // END information
                         }
                     }
