@@ -1,0 +1,14 @@
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.csprojAssemblyReference.cache
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.csproj.CoreCompileInputs.cache
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.exe.config
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.exe
+E:\Job\Enterprise projects\bot\RemAI\RemAI\bin\Debug\RemAI.pdb
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.exe
+E:\Job\Enterprise projects\bot\RemAI\RemAI\obj\Debug\RemAI.pdb
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\bin\Debug\RemAI.exe.config
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\bin\Debug\RemAI.exe
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\bin\Debug\RemAI.pdb
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\obj\Debug\RemAI.csprojAssemblyReference.cache
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\obj\Debug\RemAI.csproj.CoreCompileInputs.cache
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\obj\Debug\RemAI.exe
+C:\Users\Deazy\Desktop\RemAI-master\RemAI\obj\Debug\RemAI.pdb
