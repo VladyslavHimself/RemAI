@@ -87,6 +87,10 @@ retry:
 
                         if (bux >= 10) // if buxes less than minimum value -> break the cycle and shown information by your request
                         {
+
+                                // #TODO protection from " last chance bug "
+
+
                             if (bet > lim) // if your bet break the limit, show information about this. Set high-limit values to red
                             {
 
