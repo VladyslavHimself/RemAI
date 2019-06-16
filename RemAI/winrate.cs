@@ -9,14 +9,26 @@ namespace RemAI
 
     class Winrate
     {
-       
-        public static void toCalculateWinrate()
+
+        public static int ToCalculateWinrate()
         {
-            int absoluteWinrate = 100, nubmerOfColons = 33, lose = 0;
+            
+            
+                int maxWinrate = 33, amountrate, Winrate;
 
-            Console.WriteLine($"Your winrate = {absoluteWinrate}");
 
+                // #TODO Realize winrate formula and initialize variables from Main function
+
+            Winrate = 100 * 1 / 33;
+
+
+
+                Console.WriteLine($"Your winrate = {Winrate}");
+
+
+
+                return 0;
+           
         }
-
     }
 }
