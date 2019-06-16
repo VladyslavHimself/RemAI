@@ -19,19 +19,20 @@ namespace RemAI
 {
     class Program
     {
-
-        public static void toCalculateMartengeil(int bux, int bet, int probes)
+        private static int ToAlgorithm()
         {
 
+                
 
-            
+            return 0;
+
         }
 
 
         static void Main(string[] args)
         {
 start:
-              bool isHaveMoney, isLimitReached = false;   string temp, answr;  int bux, bet, probes = 0, lim = 50000; // Initialize all variables
+              bool isHaveMoney, isLimitReached = false;   string temp, answr;  int bux, bet, probes = 0, lim = 50000, amount; // Initialize all variables
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
             Console.WriteLine("Enter your amount of bux: ");
@@ -80,16 +81,13 @@ retry:
 
                     Console.WriteLine("============ LOG ============" + Environment.NewLine);
 
-                    
-
                     while (isHaveMoney == true) // if all conditions are true
                     {
-
-                        if (bux >= 10) // if buxes less than minimum value -> break the cycle and shown information by your request
+                      
+                        if (bux >= bet * 2) // if buxes less than minimum value -> break the cycle and shown information by your request
                         {
 
-                                // #TODO protection from " last chance bug "
-
+                               // #TODO protection from " last chance bug "
 
                             if (bet > lim) // if your bet break the limit, show information about this. Set high-limit values to red
                             {
@@ -121,7 +119,6 @@ retry:
                             bet *= 2; // bet multiplies by 2
                             probes += 1; // add this try to 
 
-
                             Console.WriteLine( probes + " try = " + bet); // information about tries and bet that they need
 
 
@@ -129,15 +126,17 @@ retry:
                         
                         else { // after calculating turn off bool and show message with info
                             Console.ResetColor(); // reset color to default 
-                        isHaveMoney = false; // set bool to false, end cycle
+                        isHaveMoney = false; // set bool to false. End cycle
 
                                     // information about bets without limits
 
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
-                            Winrate.toCalculateWinrate();
+                            Winrate.ToCalculateWinrate();
                             Console.WriteLine($"Your winrate was percentage!");
+
                                     // END information
+
                         }
                     }
                 }
