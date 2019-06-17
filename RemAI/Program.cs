@@ -120,7 +120,7 @@ retry:
 
                             Console.WriteLine( probes + " try = " + bet); // information about tries and bet that they need
 
-
+                          
                         }
                         
                         else { // after calculating turn off bool and show message with info
