@@ -103,6 +103,8 @@ retry:
                                     Console.WriteLine(Environment.NewLine + "Limit reached!");
                                     Console.WriteLine($"You can bet {probes} on line with the limit!" + Environment.NewLine);
 
+                                    Winrate.toCalculateWinrate(probes);
+
                                     // END information
 
                                     probes += 1; // back to the real values
@@ -131,9 +133,9 @@ retry:
 
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
-                            Winrate.toCalculateWinrate();
-                            Console.WriteLine($"Your winrate was percentage!");
-                                    // END information
+                            Winrate.toCalculateWinrate(probes);
+                            
+                            // END information
                         }
                     }
                 }
