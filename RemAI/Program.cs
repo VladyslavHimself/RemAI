@@ -50,7 +50,6 @@ namespace RemAI
 
                     goto start;
 
-                    break;
                 default:
 
                     Console.WriteLine("Something went wrong! Try again...");
