@@ -18,7 +18,7 @@ namespace RemAI
 
             resultWinrate = 100 * probes / MaxSpins;
 
-            Console.WriteLine($"Your winrate = {resultWinrate}% on one cycle");
+            Console.WriteLine($"Your winrate = {resultWinrate}% per cycle");
 
 
             return resultWinrate;
