@@ -10,25 +10,18 @@ namespace RemAI
     class Winrate
     {
        
-        public static void toCalculateWinrate()
+        public static float toCalculateWinrate(int probes)
         {
 
-            // #TODO Winrate algorithm
+            const int MaxSpins = 33;
+            int resultWinrate;
 
-            /*
-             *            Winrate Algorithm
-             * 
-             *  33 = 100 %
-             *  1  = 3 %
-             * 
-             * 
-             * 
-             */
+            resultWinrate = 100 * probes / MaxSpins;
 
-            int absoluteWinrate = 100, nubmerOfColons = 33, lose = 0;
+            Console.WriteLine($"Your winrate = {resultWinrate}% on one cycle");
 
-            Console.WriteLine($"Your winrate = {absoluteWinrate}");
 
+            return resultWinrate;
         }
 
     }
