@@ -28,8 +28,8 @@ namespace RemAI
             string answer;
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
-      start:
-            Console.WriteLine("Please select a function what you need: (Martengeil), (DailyReward) ");
+            start:
+            Console.WriteLine($"Enter command: {Environment.NewLine}");
 
             answer = Console.ReadLine();
 
@@ -44,17 +44,25 @@ namespace RemAI
 
                 case "DailyReward":
 
-                    // #TODO Realize Daily Reward System ( Waiting for Keef code push )
+                    // #TODO Realize Daily Reward System ( Waiting for Keef code to push )
 
-                    Console.WriteLine("Don't realized yet!");
+                    Console.WriteLine("This function don't realized yet!");
 
+                    goto start;
+
+                case "--help":
+                    
+                    // #TODO Realize communication with command line and user ( Waiting for Avir0n code to push )
+
+                    Console.WriteLine("This function don't realized yet!");
+                     
                     goto start;
 
                 default:
 
-                    Console.WriteLine("Something went wrong! Try again...");
+                    Console.WriteLine($"Something went wrong! Enter --help to get more functions! {Environment.NewLine}");
 
-                    break;
+                    goto start;
 
             }
 
