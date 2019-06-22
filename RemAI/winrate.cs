@@ -13,15 +13,15 @@ namespace RemAI
         public static float toCalculateWinrate(int probes)
         {
 
-            const int MaxSpins = 33;
-            int resultWinrate;
+            const int MaxSpins = 33; // realize the constant 33
+            int resultWinrate; // initialize the result
 
-            resultWinrate = 100 * probes / MaxSpins;
+            resultWinrate = 100 * probes / MaxSpins; // percentage formula 
 
-            Console.WriteLine($"Your winrate = {resultWinrate}% per cycle");
+            Console.WriteLine($"Your winrate = {resultWinrate}% per cycle"); // show the info
 
 
-            return resultWinrate;
+            return resultWinrate; // return result
         }
 
     }
