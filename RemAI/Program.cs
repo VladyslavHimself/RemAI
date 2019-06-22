@@ -25,20 +25,20 @@ namespace RemAI
       private static void Main(string[] args)
         {
 
-            string answer;
+            string answer; // initialize variables
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
-            start:
+            start: // back to the start
             Console.WriteLine($"Enter command: {Environment.NewLine}");
 
-            answer = Console.ReadLine();
+            answer = Console.ReadLine(); // read the answer
 
             switch(answer)
             {
 
                 case "Martengeil":
 
-                    MartengeilAlgorithm.ToCalculateTries();
+                    MartengeilAlgorithm.ToCalculateTries(); // call the Martengeil function
 
                     break;
 
