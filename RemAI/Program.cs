@@ -36,13 +36,13 @@ namespace RemAI
             switch(answer)
             {
 
-                case "Martengeil":
+                case "-Martengeil":
 
                     MartengeilAlgorithm.ToCalculateTries(); // call the Martengeil function
 
                     break;
 
-                case "DailyReward":
+                case "-DailyReward":
 
                     // #TODO Realize Daily Reward System ( Waiting for Keef code to push )
 
@@ -50,17 +50,37 @@ namespace RemAI
 
                     goto start;
 
-                case "--help":
-                    
-                    // #TODO Realize communication with command line and user ( Waiting for Avir0n code to push )
+                case "-help":
 
-                    Console.WriteLine("This function don't realized yet!");
-                     
+                    Console.WriteLine("\n-Martengeil - call the Martengeil function (MF)\n");
+                    Console.WriteLine("-DailyReward - call the daily reward function (DRF)\n");
+                    Console.WriteLine("-MartengeilTutorial - call tutorial for MF\n");
+                    Console.WriteLine("-DailyRewardFunction - call tutorial for DRF\n");
+                    Console.WriteLine("-info - show info version");
+                    
+                    goto start;
+
+                case "-MartengeilTutorial":
+
+                    HelpCallers.ShowMartengeilTutorial();
+
+                    goto start;
+
+                case "-DailyRewardTutorial":
+
+                    Console.WriteLine("This function isn't realized yet! Maybe in next patch!");
+
+                    goto start;
+
+                case "-info":
+
+                    HelpCallers.ShowInfoAboutProgram();
+
                     goto start;
 
                 default:
 
-                    Console.WriteLine($"Something went wrong! Enter --help to get more functions! {Environment.NewLine}");
+                    Console.WriteLine($"Something went wrong! Enter -help to get more functions! {Environment.NewLine}");
 
                     goto start;
 

@@ -13,13 +13,14 @@ namespace RemAI
         public static void ToCalculateTries()
         {
 
-start:
-            bool isHaveMoney, isLimitReached = false; string temp, answr; int bux, bet, probes = 0, lim = 50000; // Initialize all variables
+            start:
+            int probes = 0;
+            bool isHaveMoney, isLimitReached = false; string temp, answr; double bux, bet, lim = 50000; // Initialize all variables
 
             Console.WriteLine("Enter your amount of bux: ");
 
             temp = Console.ReadLine(); // to receive information from operator
-            bux = Convert.ToInt32(temp); // convert information to int type
+            bux = Convert.ToDouble(temp); // convert information to int type
 
             if (bux < 10) // if received less than 10 bux -> deny next steps!
             {
@@ -47,7 +48,7 @@ start:
                 Console.WriteLine("Enter your bet ( recommended 10 bux ) ");
 
                 temp = Console.ReadLine();
-                bet = Convert.ToInt32(temp);
+                bet = Convert.ToDouble(temp);
 
                 if (bet < 10) // CSGO500 accept only 10 or more bux to play
                 {
