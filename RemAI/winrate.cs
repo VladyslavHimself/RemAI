@@ -10,7 +10,7 @@ namespace RemAI
     class Winrate
     {
        
-        public static float toCalculateWinrate(int probes)
+        public static float toCalculateWinrate(int probes) // Winrate calculator
         {
 
             const int MaxSpins = 33; // realize the constant 33

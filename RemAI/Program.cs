@@ -39,7 +39,7 @@ namespace RemAI
 
                 case "-mfunc":
 
-                    MartengeilAlgorithm.ToCalculateTries(); // call the Martengeil function
+                    MartengeilAlgorithm.CalculateTries(); // call the Martengeil function
 
                     break;
 
@@ -47,41 +47,37 @@ namespace RemAI
 
                     // #TODO Realize Daily Reward System ( Waiting for Keef code to push )
 
-                    Console.WriteLine("This function don't realized yet!");
+                    Console.WriteLine("This function isn't realized yet! Maybe in next patch!"); // show warning message
 
                     goto start;
 
                 case "-help":
 
-                    Console.WriteLine("\n-mfunc - call the Martengeil function (MF)\n");
-                    Console.WriteLine("-drfunc - call the daily reward function (DRF)\n");
-                    Console.WriteLine("-MFT - call tutorial for MF\n");
-                    Console.WriteLine("-DRFT - call tutorial for DRF\n");
-                    Console.WriteLine("-info - show info version");
+                    HelpCallers.ShowHelpMenu(); // show list of commands
                     
                     goto start;
 
                 case "-MFT":
 
-                    HelpCallers.ShowMartengeilTutorial();
+                    HelpCallers.ShowMartengeilTutorial(); // Show Tutorial by Martengeil function
 
                     goto start;
 
                 case "-DRFT":
 
-                    Console.WriteLine("This function isn't realized yet! Maybe in next patch!");
+                    Console.WriteLine("This function isn't realized yet! Maybe in next patch!"); // show warning message
 
                     goto start;
 
-                case "-info":
+                case "-info": 
 
-                    HelpCallers.ShowInfoAboutProgram();
+                    HelpCallers.ShowInfoAboutProgram(); // Show info about program and developers
 
                     goto start;
 
                 case "-download":
 
-                    HelpCallers.DownloadRelease();
+                    HelpCallers.DownloadRelease(); // Open download link
 
                     goto start;
 
@@ -91,11 +87,11 @@ namespace RemAI
 
                     Thread.Sleep(200);
 
-                    break;
+                    break; // exit the program
 
                 default:
 
-                    Console.WriteLine($"Something went wrong! Enter -help to find commands! {Environment.NewLine}");
+                    Console.WriteLine($"Something went wrong! Enter -help to find commands! {Environment.NewLine}"); // show exception program
 
                     goto start;
 

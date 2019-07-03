@@ -10,7 +10,7 @@ namespace RemAI
     class MartengeilAlgorithm
     {
 
-        public static void ToCalculateTries()
+        public static void CalculateTries()
         {
 
             start:
@@ -19,8 +19,8 @@ namespace RemAI
 
             Console.WriteLine("Enter your amount of bux: ");
 
-            temp = Console.ReadLine(); // to receive information from operator
-            bux = Convert.ToDouble(temp); // convert information to int type
+            temp = Console.ReadLine();// to receive information from operator
+            bux = Convert.ToDouble(temp); // convert information to double type
 
             if (bux < 10) // if received less than 10 bux -> deny next steps!
             {

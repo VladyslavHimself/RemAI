@@ -10,27 +10,26 @@ namespace RemAI
     class HelpCallers
     {
 
-        public static void ShowMartengeilTutorial()
+        public static void ShowMartengeilTutorial() // called by "-MFT"
         {
 
-            Process.Start("https://github.com/VladyslavHimself/RemAI.git");
+            Console.WriteLine("Don't realized yet!");
+
+        }
+
+        public static void ShowDailyRewardTutorial() // called by "-DRFT"
+        {
+
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine();
+
 
 
         }
 
-        public static void ShowDailyRewardTutorial()
-        {
-
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-
-
-
-        }
-
-        public static void ShowInfoAboutProgram()
+        public static void ShowInfoAboutProgram() // called by "-info"
         {
 
             Console.WriteLine("--- Information about program ---\n");
@@ -50,12 +49,25 @@ namespace RemAI
 
         }
 
-        public static void DownloadRelease()
+        public static void DownloadRelease() // called by "-download"
         {
             Console.WriteLine("Open Release page!");
             Process.Start("https://github.com/VladyslavHimself/RemAI/releases");
 
         }
+      
+        public static void ShowHelpMenu() // called by "-download"
+        {
+            
+            Console.WriteLine("\n-mfunc - call the Martengeil function (MF)\n");
+            Console.WriteLine("-drfunc - call the daily reward function (DRF)\n");
+            Console.WriteLine("-MFT - call tutorial for MF\n");
+            Console.WriteLine("-DRFT - call tutorial for DRF\n");
+            Console.WriteLine("-help - show command list\n");
+            Console.WriteLine("-download - open the release page\n");
+            Console.WriteLine("-info - show info version\n");
+            
 
+        }
     }
 }
