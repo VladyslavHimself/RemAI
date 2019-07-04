@@ -14,8 +14,8 @@ namespace RemAI
         {
 
             start:
-            int probes = 0;
-            bool isHaveMoney, isLimitReached = false; string temp, answr; double bux, bet, lim = 50000; // Initialize all variables
+            
+            bool isHaveMoney, isLimitReached = false; string temp, answr; double bux, bet, lim = 50000; int probes = 0;// Initialize all variables
 
             Console.WriteLine("Enter your amount of bux: ");
 
@@ -101,6 +101,7 @@ namespace RemAI
                             }
 
 
+                                // Martengeil Calculation formula
 
                             bux = bux - (bet * 2); // Calculating formula for CSGO500
                             bet *= 2; // bet multiplies by 2
