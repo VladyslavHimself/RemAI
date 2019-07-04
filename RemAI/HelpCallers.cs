@@ -13,18 +13,16 @@ namespace RemAI
         public static void ShowMartengeilTutorial() // called by "-MFT"
         {
 
-            Console.WriteLine("Don't realized yet!");
+            Console.WriteLine("Not realized yet!");
 
         }
 
         public static void ShowDailyRewardTutorial() // called by "-DRFT"
         {
 
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
-            Console.WriteLine();
 
+            Console.WriteLine("Not realized yet!");
+            // Realize tutorial by DailyRewardFunction  
 
 
         }

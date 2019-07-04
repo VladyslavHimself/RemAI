@@ -65,7 +65,7 @@ namespace RemAI
 
                 case "-DRFT":
 
-                    Console.WriteLine("This function isn't realized yet! Maybe in next patch!"); // show warning message
+                    HelpCallers.ShowDailyRewardTutorial(); // Show Daily Reward Tutorial
 
                     goto start;
 
