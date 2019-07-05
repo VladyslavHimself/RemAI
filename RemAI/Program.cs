@@ -81,6 +81,14 @@ namespace RemAI
 
                     goto start;
 
+
+                case "-clear":
+
+                    HelpCallers.ClearConsole(); // Clear the console
+
+                    goto start;
+
+
                 case "-exit":
 
                     Console.WriteLine("Bye!");

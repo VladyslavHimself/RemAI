@@ -13,7 +13,8 @@ namespace RemAI
         public static void ShowMartengeilTutorial() // called by "-MFT"
         {
 
-            Console.WriteLine("Not realized yet!");
+            Console.WriteLine("Martengeil tutorial for newbies\n");
+            Console.WriteLine("At first you need a normal amount (I recommend 10k buxes)");
 
         }
 
@@ -64,7 +65,14 @@ namespace RemAI
             Console.WriteLine("-help - show command list\n");
             Console.WriteLine("-download - open the release page\n");
             Console.WriteLine("-info - show info version\n");
-            
+            Console.WriteLine("-exit - exit program\n");
+
+        }
+
+        public static void ClearConsole()
+        {
+
+            Console.Clear();
 
         }
     }
