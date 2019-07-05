@@ -14,7 +14,15 @@ namespace RemAI
         {
 
             Console.WriteLine("Martengeil tutorial for newbies\n");
-            Console.WriteLine("At first you need a normal amount (I recommend 10k buxes)");
+            Console.WriteLine("At first you need a normal amount (I recommend start from 10k buxes, your winrate with it = ~24% per cycle(cycle = 33 tries ) ");
+            Console.WriteLine("Next activate the Martengeil function by \"-mfunc\" and eneter your amount of buxes.");
+            Console.WriteLine("Next you need to enter bet, that you want to place. I recommend to bet the minimum that you can, because when you bet higher - you winrate goes down");
+            Console.WriteLine("Example: if you took 10 buxes with 10k amount - your winrate been 24%, but if you took 100 buxes with 10k amount - your winrate was been 15%");
+            Console.WriteLine("But if you want to risk, you can bet higher");
+            Console.WriteLine("Next you can see a log with your tries and sum of tries. In csgo500 your maximum bet was 50k and this give you less chance to beat cycle, but this percentage is high. ");
+            Console.WriteLine("If your amount can assume >50k bet after losses, you will seen a WARNING RED sums that you can't bet in CSGO500, but can bet in other sites with other rules");
+            Console.WriteLine("Good Luck!\n");
+
 
         }
 
