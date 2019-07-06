@@ -88,12 +88,14 @@ namespace RemAI
 
                     goto start;
 
+                case "!AnalyzeMode":
+
+                    HelpCallers.SwitchToAnalyze();
+
+                    goto start;
+
 
                 case "-exit":
-
-                    Console.WriteLine("Bye!");
-
-                    Thread.Sleep(200);
 
                     break; // exit the program
 

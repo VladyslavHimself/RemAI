@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace RemAI
@@ -22,7 +23,6 @@ namespace RemAI
             Console.WriteLine("Next you can see a log with your tries and sum of tries. In csgo500 your maximum bet was 50k and this give you less chance to beat cycle, but this percentage is high. ");
             Console.WriteLine("If your amount can assume >50k bet after losses, you will seen a WARNING RED sums that you can't bet in CSGO500, but can bet in other sites with other rules");
             Console.WriteLine("Good Luck!\n");
-
 
         }
 
@@ -80,8 +80,21 @@ namespace RemAI
         public static void ClearConsole()
         {
 
+            Console.WriteLine("Clear the console...");
+            Thread.Sleep(100);
             Console.Clear();
 
         }
+
+        public static void SwitchToAnalyze()
+
+        {
+
+            Console.WriteLine("Don't realized yet!");
+
+        }
+
+
+
     }
 }
