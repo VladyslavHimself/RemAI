@@ -88,15 +88,17 @@ namespace RemAI
 
                     goto start;
 
+                case "!AnalyzeMode":
+
+                    HelpCallers.SwitchToAnalyze();
+
+                    goto start;
+
 
                 case "-exit":
 
-                    Console.WriteLine("Bye!");
-
-                    Thread.Sleep(200);
-
                     break; // exit the program
-
+                    
                 default:
 
                     Console.WriteLine($"Something went wrong! Enter -help to find commands! {Environment.NewLine}"); // show exception program
@@ -105,9 +107,8 @@ namespace RemAI
 
             }
 
-            
-
         }
 
     }
+
 }

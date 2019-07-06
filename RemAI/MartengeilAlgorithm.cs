@@ -20,7 +20,18 @@ namespace RemAI
             Console.WriteLine("Enter your amount of bux: ");
 
             temp = Console.ReadLine();// to receive information from operator
-            bux = Convert.ToDouble(temp); // convert information to double type
+
+            try
+            {
+                bux = Convert.ToDouble(temp); // convert information to double type
+            }
+           
+            catch(Exception)
+            {
+                Console.WriteLine("Catched exception! Check your input information and try again!");
+
+                goto start;
+            }
 
             if (bux < 10) // if received less than 10 bux -> deny next steps!
             {
@@ -42,13 +53,24 @@ namespace RemAI
             }
             else
             {
-                retry:
+            retry:
                 isHaveMoney = true; // if all of last conditions was done
-
+bet_try:
                 Console.WriteLine("Enter your bet ( recommended 10 bux ) ");
 
                 temp = Console.ReadLine();
-                bet = Convert.ToDouble(temp);
+                try
+                {
+                    bet = Convert.ToDouble(temp);
+                }
+
+                catch(Exception)
+                {
+
+                    Console.WriteLine("Catched exception! Check your input information and try again!");
+                    goto bet_try;
+                }
+
 
                 if (bet < 10) // CSGO500 accept only 10 or more bux to play
                 {
@@ -114,7 +136,10 @@ namespace RemAI
                         }
 
                         else
-                        { // after calculating turn off bool and show message with info
+
+                        {
+                            // after calculating turn off bool and show message with info
+
                             Console.ResetColor(); // reset color to default 
                             isHaveMoney = false; // set bool to false, end cycle
 
@@ -122,7 +147,7 @@ namespace RemAI
 
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
-                            Winrate.toCalculateWinrate(probes);
+                                Winrate.toCalculateWinrate(probes); // call winrate function
 
                             // END information
                         }
