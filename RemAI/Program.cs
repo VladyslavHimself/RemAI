@@ -98,7 +98,7 @@ namespace RemAI
                 case "-exit":
 
                     break; // exit the program
-
+                    
                 default:
 
                     Console.WriteLine($"Something went wrong! Enter -help to find commands! {Environment.NewLine}"); // show exception program
@@ -107,9 +107,8 @@ namespace RemAI
 
             }
 
-            
-
         }
 
     }
+
 }
