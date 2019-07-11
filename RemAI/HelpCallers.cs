@@ -28,12 +28,10 @@ namespace RemAI
 
         public static void ShowDailyRewardTutorial() // called by "-DRFT"
         {
-
-
+            
             Console.WriteLine("Not realized yet!");
-            // Realize tutorial by DailyRewardFunction  
-
-
+            // Realize tutorial for DailyRewardFunction  
+            
         }
 
         public static void ShowInfoAboutProgram() // called by "-info"
@@ -48,12 +46,8 @@ namespace RemAI
             Console.WriteLine("\n\t--- CONTACTS ---");
             Console.WriteLine(" Program created by VladyslavHimself.");
             Console.WriteLine(" Contact info -> vladyslavhimself@gmail.com");
-
-
-            
             Console.WriteLine("\n---------------------------------\n");
-
-
+            
         }
 
         public static void DownloadRelease() // called by "-download"
@@ -86,15 +80,27 @@ namespace RemAI
 
         }
 
-        public static void SwitchToAnalyze()
+        public static void SwitchToAnalyze(bool isDeveloper)
 
         {
+           
+           if ( isDeveloper == true )
+            {
+                
 
-            Console.WriteLine("Don't realized yet!");
+                try
+                {
+                    Process.Start("Analyzer.exe");
+
+                }
+
+                catch (Exception)
+                {
+                    Console.WriteLine("Not added on project this time.Maybe on version 1.3 or higher ;)");
+                }
+
+    } else if ( isDeveloper == false ) Console.WriteLine("Not found 404 ;)");
 
         }
-
-
-
     }
 }

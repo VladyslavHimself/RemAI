@@ -26,7 +26,7 @@ namespace RemAI
       private static void Main(string[] args)
         {
 
-            string answer; // initialize variables
+            string answer; bool isDeveloper = false; // initialize variables
 
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
             start: // back to the start
@@ -88,9 +88,44 @@ namespace RemAI
 
                     goto start;
 
-                case "!AnalyzeMode":
+                case "!AnalyzeMode":               
+                                                     // #TODO Realize developer mode in other function. 
+                                                    // #TODO Build logic for developer mode for the future plans!
 
-                    HelpCallers.SwitchToAnalyze();
+                    if (isDeveloper == true)
+                    {
+                        HelpCallers.SwitchToAnalyze(isDeveloper);
+                    }
+                    Console.WriteLine("Enter developer key:");
+                   string key = Console.ReadLine();
+              
+                    if (key == "1699") 
+                    {
+
+                        Console.WriteLine("Set developer permission for this session...");
+                        try
+                        {
+
+                            isDeveloper = true;
+                            Console.WriteLine("Done! Open Analyzer!");
+                            HelpCallers.SwitchToAnalyze(isDeveloper);
+                        } 
+
+                        catch (Exception)
+                        {
+
+                            Console.WriteLine("Error! redirecting back!");
+                            goto start;
+                        }
+                         
+
+
+                    } else {
+
+                        HelpCallers.SwitchToAnalyze(isDeveloper);
+                    }
+
+                    
 
                     goto start;
 
