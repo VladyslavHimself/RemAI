@@ -19,53 +19,9 @@ using RemAI.utils;
 namespace RemAI
 {
 
-    class RemAI
+    public class RemAI
     {
 
-        public static bool DeveloperMode(bool isDeveloper, string devkey)
-        {
-            
-            if (isDeveloper == true)
-            {
-
-                Console.WriteLine("You are developer in this session!");
-                return true;
-                
-            }
-            else if (isDeveloper == false) 
-            {
-
-                Console.WriteLine("Enter developer key: ");
-                devkey = Console.ReadLine();
-                    if (devkey == "1699")
-                {
-                    Console.WriteLine("Set developer permission to this session...");
-                   try
-                    {
-                          isDeveloper = true;
-                        
-                        Console.WriteLine("Complete! You a developer now!");
-                        return true;
-
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Something went wrong! Try on another session.");
-                        
-                    }
-                    
-                } else {
-                    isDeveloper = false;
-                    
-                    Console.WriteLine("Wrong key!");
-                   
-                }
-                
-            }
-            return false;
-        }
-
-        
         private static void Main(string[] args)
         {
             string devkey = null;
@@ -81,13 +37,13 @@ namespace RemAI
             switch(answer)
             {
 
-                case "-mfunc":
+                case "-mfunc": case "-MartengeilFunction":
 
                     MartengeilAlgorithm.CalculateTries(); // call the Martengeil function
 
                     break;
 
-                case "-drfunc":
+                case "-drfunc": case "-DailyRewardFunction":
 
                     // #TODO Realize Daily Reward System ( Waiting for Keef code to push )
 
@@ -95,19 +51,19 @@ namespace RemAI
 
                     goto start;
 
-                case "-help":
+                case "-help": case "-list":
 
                     HelpCallers.ShowHelpMenu(); // show list of commands
                     
                     goto start;
 
-                case "-MFT":
+                case "-MFT": case "-MartengeilFunctionTutorial":
 
                     HelpCallers.ShowMartengeilTutorial(); // Show Tutorial by Martengeil function
 
                     goto start;
 
-                case "-DRFT":
+                case "-DRFT": case "-DailyRewardFunctionTutorial":
 
                     HelpCallers.ShowDailyRewardTutorial(); // Show Daily Reward Tutorial
 
@@ -127,6 +83,7 @@ namespace RemAI
 
 
                 case "-clear":
+                case "-cls":
 
                     HelpCallers.ClearConsole(); // Clear the console
 
@@ -136,19 +93,19 @@ namespace RemAI
 
                     Console.WriteLine("Enter DevToolKit key");
 
-                    if (DeveloperMode(isDeveloper, devkey) == true)
+                    if (HelpCallers.UpToDev(isDeveloper, devkey) == true)
                     {
                         isDeveloper = true;
-                        
 
-                    } else if (DeveloperMode(isDeveloper, devkey) == false)
+
+                    }
+               else if (HelpCallers.UpToDev(isDeveloper, devkey) == false)
                     {
 
                         isDeveloper = false;
                         Console.WriteLine("Wrong key!");
 
                     }
-
                     goto start;
 
                 case "-AnalyzeMode": case "-AM":
@@ -160,7 +117,7 @@ namespace RemAI
                     Console.ReadKey();
                     goto start;
 
-                case "-exit":
+                case "-exit": case "-close":
 
                     break; // exit the program
                     
