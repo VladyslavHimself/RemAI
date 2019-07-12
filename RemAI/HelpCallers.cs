@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using RemAI.utils;
 
 namespace RemAI
 {
@@ -40,6 +41,7 @@ namespace RemAI
             Console.WriteLine("--- Information about program ---\n");
             Console.WriteLine(" Name: RemAI (bot) ");
             Console.WriteLine(" Type: Legacy ");
+            Console.WriteLine(" Permission: " + Utility.CheckPermission());
             Console.WriteLine(" Version: 1.2p");
             Console.WriteLine(" You can check updates on -> https://github.com/VladyslavHimself/RemAI/releases");
 

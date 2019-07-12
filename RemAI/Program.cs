@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using RemAI.utils;
 
 /*
  * 
@@ -22,12 +22,56 @@ namespace RemAI
     class RemAI
     {
 
-    
-      private static void Main(string[] args)
+        public static bool DeveloperMode(bool isDeveloper, string devkey)
         {
+            
+            if (isDeveloper == true)
+            {
 
-            string answer; bool isDeveloper = false; // initialize variables
+                Console.WriteLine("You are developer in this session!");
+                return true;
+                
+            }
+            else if (isDeveloper == false) 
+            {
 
+                Console.WriteLine("Enter developer key: ");
+                devkey = Console.ReadLine();
+                    if (devkey == "1699")
+                {
+                    Console.WriteLine("Set developer permission to this session...");
+                   try
+                    {
+                          isDeveloper = true;
+                        
+                        Console.WriteLine("Complete! You a developer now!");
+                        return true;
+
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("Something went wrong! Try on another session.");
+                        
+                    }
+                    
+                } else {
+                    isDeveloper = false;
+                    
+                    Console.WriteLine("Wrong key!");
+                   
+                }
+                
+            }
+            return false;
+        }
+
+        
+        private static void Main(string[] args)
+        {
+            string devkey = null;
+            string answer; // initialize variables
+            bool isDeveloper; // dev mode
+            isDeveloper = false;
             Console.WriteLine("Welcome to the RemAI. I want to help you earn some money :)");
             start: // back to the start
             Console.WriteLine($"Enter command: {Environment.NewLine}");
@@ -69,8 +113,8 @@ namespace RemAI
 
                     goto start;
 
-                case "-info": 
-
+                case "-info":
+                   
                     HelpCallers.ShowInfoAboutProgram(); // Show info about program and developers
 
                     goto start;
@@ -88,47 +132,33 @@ namespace RemAI
 
                     goto start;
 
-                case "!AnalyzeMode":               
-                                                     // #TODO Realize developer mode in other function. 
-                                                    // #TODO Build logic for developer mode for the future plans!
+                case "-devmode":
 
-                    if (isDeveloper == true)
+                    Console.WriteLine("Enter DevToolKit key");
+
+                    if (DeveloperMode(isDeveloper, devkey) == true)
                     {
-                        HelpCallers.SwitchToAnalyze(isDeveloper);
-                    }
-                    Console.WriteLine("Enter developer key:");
-                   string key = Console.ReadLine();
-              
-                    if (key == "1699") 
+                        isDeveloper = true;
+                        
+
+                    } else if (DeveloperMode(isDeveloper, devkey) == false)
                     {
 
-                        Console.WriteLine("Set developer permission for this session...");
-                        try
-                        {
+                        isDeveloper = false;
+                        Console.WriteLine("Wrong key!");
 
-                            isDeveloper = true;
-                            Console.WriteLine("Done! Open Analyzer!");
-                            HelpCallers.SwitchToAnalyze(isDeveloper);
-                        } 
-
-                        catch (Exception)
-                        {
-
-                            Console.WriteLine("Error! redirecting back!");
-                            goto start;
-                        }
-                         
-
-
-                    } else {
-
-                        HelpCallers.SwitchToAnalyze(isDeveloper);
                     }
-
-                    
 
                     goto start;
 
+                case "-AnalyzeMode": case "-AM":
+                     
+                    // #TODO Build logic for developer mode for the future plans! ( inProgress )
+
+                    HelpCallers.SwitchToAnalyze(isDeveloper);
+                   
+                    Console.ReadKey();
+                    goto start;
 
                 case "-exit":
 
