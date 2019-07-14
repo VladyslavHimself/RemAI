@@ -108,10 +108,9 @@ namespace RemAI
                     goto start;
 
                 case "-AnalyzeMode": case "-AM":
-                     
-                    // #TODO Build logic for developer mode for the future plans! ( inProgress )
 
-                    HelpCallers.SwitchToAnalyze(isDeveloper);
+                    Control.OpenAnalyzer(isDeveloper); 
+                   
                    
                     Console.ReadKey();
                     goto start;
