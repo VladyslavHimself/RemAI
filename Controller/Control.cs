@@ -4,13 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace Controller
 {
     public class Control
     {
 
+
         // Shown winrate per cycle
+
 
         public static float GetWinrateByInfo(int probes) // Winrate calculator
         {
@@ -26,7 +30,9 @@ namespace Controller
             return resultWinrate; // return result
         }
 
+
         // Check Developer Permission for currently session
+
 
         public static string CheckPermission()
         {
@@ -35,7 +41,9 @@ namespace Controller
             return "unknown";
         }
 
+
         // Clear the console
+
 
         public static void ClearConsole()
         {
@@ -46,7 +54,9 @@ namespace Controller
                    
         }
 
+
         // Give user chance to change permission
+
 
         public static bool PermissionChoise(bool isDeveloper, string devkey)
         {
@@ -91,8 +101,75 @@ namespace Controller
         }
 
 
+        // Calculate tries by Martengeil formula
+
+
+        public static double CalculateByMartengeil(double bux, double bet)
+        {
+
+            bux = bux - (bet * 2); // Calculating formula for CSGO500
+            bet *= 2; // bet multiplies by 2
+
+            return bet;
+        }
+
+
+        // Open site analyzer
+
+
+        public static void OpenAnalyzer(bool isDeveloper)
+
+        {
+
+            if (isDeveloper == true)
+            {
+
+
+                try
+                {
+                    Process.Start("Analyzer.exe");
+
+                }
+
+                catch (Exception)
+                {
+                    Console.WriteLine("Not added on project this time.Maybe on version 1.3 or higher ;)");
+                }
+
+            }
+            else if (isDeveloper == false) Console.WriteLine("Not found 404 ;)");
+
+        }
+
+
+        // Alternative variants "Yes" or "No"
+
+
+        public static bool CloseOrRestart(string answer)
+        {
+
+
+            answer = Console.ReadLine(); // restart or exit 
+
+            if (answer == "y" || answer == "Y") // if answer from user will be y or Y -> clear the console and back to the start
+            {
+
+                Process.Start("RemAI"); // to start new instance of application
+                Environment.Exit(0); //to turn off current app
+
+                return true;
+            }
+            else if (answer == "n" || answer == "N") // if answer from user was n or N -> close the program
+            {
+                Environment.Exit(0); // Close program
+
+                return false;
+            }
+            
+            return false;
+        }
+
 
         
-
     }
 }
