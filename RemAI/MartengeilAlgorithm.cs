@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Controller;
 namespace RemAI
 {
     class MartengeilAlgorithm
@@ -112,7 +112,7 @@ bet_try:
                                     Console.WriteLine(Environment.NewLine + "Limit reached!");
                                     Console.WriteLine($"You can bet {probes} on line with the limit!" + Environment.NewLine);
 
-                                    Winrate.toCalculateWinrate(probes);
+                                    Control.GetWinrateByInfo(probes);
 
                                     // END information
 
@@ -147,7 +147,7 @@ bet_try:
 
                             Console.WriteLine(Environment.NewLine + "=============================");
                             Console.WriteLine($"You can bet {probes} times on line without limit ;)");
-                                Winrate.toCalculateWinrate(probes); // call winrate function
+                                Control.GetWinrateByInfo(probes);
 
                             // END information
                         }

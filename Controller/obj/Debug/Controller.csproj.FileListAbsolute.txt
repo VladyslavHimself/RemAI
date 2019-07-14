@@ -1,0 +1,5 @@
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\Controller\bin\Debug\Controller.dll
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\Controller\bin\Debug\Controller.pdb
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\Controller\obj\Debug\Controller.csproj.CoreCompileInputs.cache
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\Controller\obj\Debug\Controller.dll
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\Controller\obj\Debug\Controller.pdb
