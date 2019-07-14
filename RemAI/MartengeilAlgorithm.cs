@@ -132,7 +132,7 @@ bet_try:
 
                             Console.WriteLine(probes + " try = " + bet); // information about tries and bet that they need
 
-
+                            
                         }
 
                         else

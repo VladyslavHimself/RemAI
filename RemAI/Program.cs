@@ -92,13 +92,13 @@ namespace RemAI
 
                     Console.WriteLine("Enter DevToolKit key");
 
-                    if (HelpCallers.UpToDev(isDeveloper, devkey) == true)
+                    if (Control.PermissionChoise(isDeveloper, devkey) == true)
                     {
                         isDeveloper = true;
 
 
                     }
-               else if (HelpCallers.UpToDev(isDeveloper, devkey) == false)
+               else if (Control.PermissionChoise(isDeveloper, devkey) == false)
                     {
 
                         isDeveloper = false;

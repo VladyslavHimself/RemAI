@@ -72,47 +72,7 @@ namespace RemAI
 
         }
 
-        public static bool UpToDev(bool isDeveloper, string devkey)
-        {
-
-            if (isDeveloper == true)
-            {
-
-                Console.WriteLine("You are developer in this session!");
-                return true;
-
-            }
-       else if (isDeveloper == false)
-            {
-
-                Console.WriteLine("Enter developer key: ");
-                devkey = Console.ReadLine();
-                if (devkey == "1699")
-                {
-                    Console.WriteLine("Set developer permission to this session...");
-                    try
-                    {
-                        isDeveloper = true;
-
-                        Console.WriteLine("Complete! You a developer now!");
-
-                        return true;
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("Something went wrong! Try on another session.");
-
-                    }
-
-                }
-                else
-                {
-                    isDeveloper = false;
-                    Console.WriteLine("Wrong key!");
-                }
-            }
-            return false;
-        }
+        
 
         public static void SwitchToAnalyze(bool isDeveloper)
 
