@@ -5,7 +5,30 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Diagnostics;
-using static System.Net.Mime.MediaTypeNames;
+
+/*                                          
+ *                                          Control Library ToolBox
+ *                                          
+ *      Control Lib – universal library toolbox for casino-associated programs.In description below, you can get more information.
+ *
+ *                                                          Functions:
+ * 
+ *          GetWinrateByInfo(probes) –where probes are integer, you can get winrate of your tries in % by cycle (cycle is a 33 tries )
+ *
+ *          CheckPermission() – check permission in currently session(user or developer )
+ *
+ *          ClearConsole() – clear the console by one command.
+ *           
+ *          PermissionChoise(isDeveloper, devkey) – where isDeveloper is bool, devkey is string, gives operator chance to change permission from user to developer!
+ *
+ *          CalculateMartengeil(double bux, double bet) – where bux is double, bet is double, calculates Martengeil function by one command.
+ *
+ *          OpenAnalyzer(isDeveloper) – where isDeveloper is bool, opens Analyzer for analyze traffic in casino(works only, if you have existing Analyzer)
+ *
+ *          CloseOrRestart(answer) – where answer is string. One command, that doing your code shorter, if you’re using this type of algorithm many times.
+ *
+ * 
+ */
 
 namespace Controller
 {
@@ -79,17 +102,13 @@ namespace Controller
                     try
                     {
                         isDeveloper = true;
-
                         Console.WriteLine("Complete! You a developer now!");
-
                         return true;
                     }
                     catch (Exception)
                     {
                         Console.WriteLine("Something went wrong! Try on another session.");
-
                     }
-
                 }
                 else
                 {
@@ -123,22 +142,17 @@ namespace Controller
 
             if (isDeveloper == true)
             {
-
-
                 try
                 {
                     Process.Start("Analyzer.exe");
-
                 }
 
                 catch (Exception)
                 {
                     Console.WriteLine("Not added on project this time.Maybe on version 1.3 or higher ;)");
                 }
-
             }
             else if (isDeveloper == false) Console.WriteLine("Not found 404 ;)");
-
         }
 
 
