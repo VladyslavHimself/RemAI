@@ -22,10 +22,10 @@ E:\Job\Enterprise projects\C#\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\RemAI.exe.config
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\RemAI.exe
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\RemAI.pdb
-E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csprojAssemblyReference.cache
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csproj.CoreCompileInputs.cache
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.exe
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.pdb
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\Controller.dll
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\Controller.pdb
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csproj.CopyComplete
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csprojAssemblyReference.cache
