@@ -15,7 +15,7 @@ namespace RemAI
 
             start:
             
-            bool isHaveMoney, isLimitReached = false; string temp, answr; double bux, bet, lim = 50000; int probes = 0;// Initialize all variables
+            bool isHaveMoney, isLimitReached = false; string temp, answer = null; double bux, bet, lim = 50000; int probes = 0;// Initialize all variables
 
             Console.WriteLine("Enter your amount of bux: ");
 
@@ -38,18 +38,8 @@ namespace RemAI
                 Console.WriteLine("You haven't enough bux!");
                 Console.WriteLine("Want to restart programm? (y/n)");
 
-                answr = Console.ReadLine(); // retry or exit 
-
-                if (answr == "y" || answr == "Y") // if answer from user will be y or Y -> clear the console and back to the start
-                {
-                    Console.Clear(); // clear the console
-                    goto start; // back to the start
-                }
-                else if (answr == "n" || answr == "N") // if answer from user was n or N -> close the program
-                {
-                    Environment.Exit(0); // Close program
-                }
-
+                Control.CloseOrRestart(answer);
+                
             }
             else
             {
@@ -89,8 +79,6 @@ bet_try:
 
                     Console.WriteLine("============ LOG ============" + Environment.NewLine);
 
-
-
                     while (isHaveMoney == true) // if all conditions are true
                     {
 
@@ -123,16 +111,11 @@ bet_try:
                             }
 
 
-                                // Martengeil Calculation formula
+                            // Martengeil Calculation formula
 
-                            bux = bux - (bet * 2); // Calculating formula for CSGO500
-                            bet *= 2; // bet multiplies by 2
+                            bet = Control.CalculateByMartengeil(bux, bet);
                             probes += 1; // add this try to 
-
-
                             Console.WriteLine(probes + " try = " + bet); // information about tries and bet that they need
-
-                            
                         }
 
                         else

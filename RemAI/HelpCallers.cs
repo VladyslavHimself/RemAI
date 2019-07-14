@@ -42,7 +42,7 @@ namespace RemAI
             Console.WriteLine(" Type: Legacy ");
             Console.WriteLine(" Permission: " + Control.CheckPermission() );
             Console.WriteLine(" Version: 1.2p");
-            Console.WriteLine(" You can check updates on -> https://github.com/VladyslavHimself/RemAI/releases");
+            Console.WriteLine(" You can check updates on -> https://github.com/VladyslavHimself/RemAI/releases or use command '-download' to open!");
 
             Console.WriteLine("\n\t--- CONTACTS ---");
             Console.WriteLine(" Program created by VladyslavHimself.");
@@ -74,27 +74,6 @@ namespace RemAI
 
         
 
-        public static void SwitchToAnalyze(bool isDeveloper)
-
-        {
-           
-           if ( isDeveloper == true )
-            {
-                
-
-                try
-                {
-                    Process.Start("Analyzer.exe");
-
-                }
-
-                catch (Exception)
-                {
-                    Console.WriteLine("Not added on project this time.Maybe on version 1.3 or higher ;)");
-                }
-
-    } else if ( isDeveloper == false ) Console.WriteLine("Not found 404 ;)");
-
-        }
+        
     }
 }
