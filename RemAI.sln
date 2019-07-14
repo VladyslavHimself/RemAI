@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemAI", "RemAI\RemAI.csproj", "{F11B1ABE-A8DE-432C-8D5C-F2FEED37E171}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{A74434B7-F88C-403A-88C3-34CAE0CEFC55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,6 +20,12 @@ Global
 		{F11B1ABE-A8DE-432C-8D5C-F2FEED37E171}.Pre-release|Any CPU.Build.0 = Debug|Any CPU
 		{F11B1ABE-A8DE-432C-8D5C-F2FEED37E171}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F11B1ABE-A8DE-432C-8D5C-F2FEED37E171}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Pre-release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Pre-release|Any CPU.Build.0 = Release|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74434B7-F88C-403A-88C3-34CAE0CEFC55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,3 +26,6 @@ E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Deb
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csproj.CoreCompileInputs.cache
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.exe
 E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.pdb
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\Controller.dll
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Debug\Controller.pdb
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Debug\RemAI.csproj.CopyComplete

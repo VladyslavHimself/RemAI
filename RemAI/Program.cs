@@ -5,8 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using RemAI.utils;
-
+using Controller;
 /*
  * 
  * Programm oriented only for CSGO500
@@ -85,7 +84,7 @@ namespace RemAI
                 case "-clear":
                 case "-cls":
 
-                    HelpCallers.ClearConsole(); // Clear the console
+                    Control.ClearConsole();
 
                     goto start;
 
@@ -93,13 +92,13 @@ namespace RemAI
 
                     Console.WriteLine("Enter DevToolKit key");
 
-                    if (HelpCallers.UpToDev(isDeveloper, devkey) == true)
+                    if (Control.PermissionChoise(isDeveloper, devkey) == true)
                     {
                         isDeveloper = true;
 
 
                     }
-               else if (HelpCallers.UpToDev(isDeveloper, devkey) == false)
+               else if (Control.PermissionChoise(isDeveloper, devkey) == false)
                     {
 
                         isDeveloper = false;
