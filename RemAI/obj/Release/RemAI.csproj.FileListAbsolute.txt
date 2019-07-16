@@ -1,0 +1,7 @@
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Release\RemAI.exe.config
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Release\RemAI.exe
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\bin\Release\RemAI.pdb
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Release\RemAI.csprojAssemblyReference.cache
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Release\RemAI.csproj.CoreCompileInputs.cache
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Release\RemAI.exe
+E:\Job\Enterprise projects\Project REM\Roulette bot( RemAI )\RemAI\RemAI\obj\Release\RemAI.pdb
